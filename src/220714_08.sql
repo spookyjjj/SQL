@@ -11,4 +11,8 @@ insert into pktest (myCol1, myCol2) values('1', '1');
 insert into pktest (myCol1, myCol2) values('1', '2');
 insert into pktest (myCol1, myCol2) values('2', '1'); -- ★★두개 중 하나만 달라도 중복으로 안 여김
 insert into pktest (myCol1, myCol2) values('1', '1'); -- 단, 두개다 같으면 중복임~
--- pk는 여러개여도 index는 하나! 왜냐면 pk끼리도 순서가 있기 때문에 1번 pk하고 2번 pk하고 like order by 기준 2개 준 것 처럼
+-- pk는 여러개여도 index는 하나! 왜냐면 pk끼리도 순서가 있기 때문에 1번 pk하고 2번 pk하고 like order by 기준 2개 준 것 처럼book
+
+select * from book;
+delete from book where title = 'sql연습2';
+update book set price = 5500 where id = 5;
